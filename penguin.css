@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+table, td, th {border: solid #807f7f 3px; border-collapse: collapse;}
+img {width:50 px; height: 50px;}
+td {text-align: center}
+td {font-family: 'Roboto Mono', monospace;}
+th {background-color: black; color: white; padding: 5px}
+td:nth-child(even){background-color:#fff1f1ba;}
+td:nth-child(odd){background-color:white;}
+td:hover {background-color: darkgray}
+body{background-color: gainsboro;}
+h2{font-family: 'Roboto Mono', monospace; }
