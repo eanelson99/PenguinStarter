@@ -67,6 +67,7 @@ var clearTable = function()
             .remove();
     }
 
+
 var classDataPromise = d3.json("classData.json")
     
 
@@ -110,7 +111,7 @@ var displayTable = function(classData)
         .text(getPenguinFinal)
     rows.append("td")
         .text(getGrade)
- 
+
 }
 
 var initHeaders = function(classData)
@@ -182,4 +183,23 @@ var initHeaders = function(classData)
             displayTable(classData);
         
     });
+    
+    d3.select("#OverallGrade")
+    .on("click", function()
+    { console.log("clicked");
+        classData.sort(function(a,b)
+            { 
+                var ainc = getGrade(a);
+                var binc = getGrade(b);
+                if (ainc < binc) {return -1}
+                else if (ainc > binc) {return 1}
+                else {return 0;}
+            
+            });
+            clearTable();
+            displayTable(classData);
+        
+    });
 }
+
+
